@@ -18,6 +18,6 @@ function calculating_response (){
 }
 function calculate_negative (){
     if (age1.value <0){
-        response.textContent = 'El numero es erroneo, por favor indique un valor correcto.'
+        response.textContent = 'El numero es erroneo, por favor indique un valor correcto.';
     }
 }
