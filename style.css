@@ -1,27 +1,31 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(votaciones.jpg);
     display:flex;
     justify-content:center;
     align-items:center;
     width: 100vw;
     height: 100vh;
-    background-size: cover;
 }
 .cont-primary{
     display: flex;
     flex-direction: column;
     width: 30%;
     height: 40%;
-    background-color:white;
+    background-color:rgb(104, 225, 255);
     align-items: center;
     justify-content: space-evenly;
+    position:relative;
 }
 .vote-img{
     width: 30%;
     height: 30%;
 }
-/*.img-vote{
+.img-vote{
+    background-image: url(votaciones.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     filter: blur(3px);
-}*/
+}
