@@ -5,6 +5,7 @@ const response = document.querySelector('#p-response');
 
 
 button_primary.addEventListener('click',calculating_response);
+button_primary.addEventListener('click',calculate_negative);
 
 function calculating_response (){
 
@@ -13,5 +14,10 @@ function calculating_response (){
     }
     else{
         response.textContent = name1.value + ' NO PUEDE VOTAR MMGV';
+    }
+}
+function calculate_negative (){
+    if (age1.value <0){
+        response.textContent = 'El numero es erroneo, por favor indique un valor correcto.'
     }
 }
