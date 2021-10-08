@@ -10,22 +10,41 @@ body{
 .cont-primary{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 25%;
     height: 40%;
-    background-color:rgb(104, 225, 255);
+    background-image: url(images.jfif);
+    /*background-image: url(colombia-banderas.jpg);*/
     align-items: center;
     justify-content: space-evenly;
     position:relative;
+    border-radius: 10px;
+    background-size: cover;
 }
+.cont-primary input{
+    width: 35%;
+    height: 6%;
+    border-radius: 10px;
+}
+.cont-primary button{
+    width: 35%;
+    height: 10%;
+    border-radius: 24px;
+    background-color: #4eb99f;
+}
+
 .vote-img{
-    width: 30%;
+    width: 35%;
     height: 30%;
 }
 .img-vote{
-    background-image: url(votaciones.jpg);
+    background-image: url(Fondo_Login.jpg);
+    /*background-image: url(votaciones.jpg);*/
     background-size: cover;
     position: absolute;
     width: 100vw;
     height: 100vh;
     filter: blur(3px);
+}
+#p-response{
+    color: white;
 }
