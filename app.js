@@ -10,26 +10,29 @@ button_primary.addEventListener('click',empty_field);
 button_primary.addEventListener('click',excessive_age);*/
 
 function calculating_response(){
-    let  birthday = date1.value.split('-');
+    let birthday = date1.value.split('-');
     let current_date = new Date();
-    console.log(current_date);
     let year = current_date.getFullYear();
-    console.log(year);
     let month = current_date.getMonth();
-    console.log(month);
 
     let day = current_date.getDate();
-    console.log(day);
 
-    let result = year - birthday[0];
+    let resultYear = year - birthday[0];
     console.log(result);
-    
-    if (result <= 0){
-        console.log('Usted es mayor de edad, si puede votar.')
+    let resultMonth = month - birthday[1];
+    console.log(result);
+    let resultDay = day - birthday[2];
+    console.log(result);
+
+
+    if (month < birthday[1]){
+        resultYear--;
+        console.log('Kleverman es gay');
     }
-    else{
-        console.log('No puede votar');
+    else if (){
+
     }
+
 }
 
 /*
