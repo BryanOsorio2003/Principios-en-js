@@ -1,7 +1,7 @@
 const name1 = document.querySelector('#name');
 const date1 = document.querySelector('#date');
 const button_primary = document.querySelector('#btn-primary');
-/*const response = document.querySelector('#p-response');*/
+const response = document.querySelector('#p-response');
 
 
 button_primary.addEventListener('click',calculating_response);
@@ -13,26 +13,39 @@ function calculating_response(){
     let birthday = date1.value.split('-');
     let current_date = new Date();
     let year = current_date.getFullYear();
-    let month = current_date.getMonth();
+    let month = current_date.getMonth() +1;
 
     let day = current_date.getDate();
 
-    let resultYear = year - birthday[0];
+    /*let resultYear = year - birthday[0];
     console.log(result);
     let resultMonth = month - birthday[1];
     console.log(result);
     let resultDay = day - birthday[2];
-    console.log(result);
+    console.log(result);*/
+    resultBirthday = (year - birthday[0]) *12 - (month - birthday[1]);
+    if (resultBirthday < (18*12)) {
+        response.textContent = 'Hola '+  name1.value + ' Es menor de edad y no puede votar.';
+    }
+    else {
+        response.textContent = 'Hola '+  name1.value + ' Es mayor de edad y sí puede votar.';
+    }
 
 
-    if (month < birthday[1]){
+    /*if (month < birthday[1]){
         resultYear--;
-        console.log('Kleverman es gay');
+        console.log('Es mayor de edad');
     }
-    else if (){
-
+    else if (month > birthday[1]){
+        resultYear--;
+        console.log('Es menor de edad');
     }
-
+    if (day < birthday[2]){
+        console.log('Es mayor de edad');
+    }
+    else if (day > birthday[2]){
+        resultYear--;
+        console.log('Es menor de edad');*/
 }
 
 /*
